@@ -8,8 +8,6 @@ function getTimestamps(tab){
   injectedMethod(tab, 'init', function(response){
     alert('elements in this tab' + response.data);
   });
-  // alert('here!!!' + document.getElementsByClassName('relativetime')[0]);
-  // return document.getElementsByClassName(selector);
 }
 
 chrome.browserAction.onClicked.addListener(getTimestamps);
