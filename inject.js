@@ -12,8 +12,8 @@ var injected = injected || (function(){
         elements[i].className += ' faded';
       }
     }
-  
-
+  };
+ 
   chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
     var data = {};
     if (methods.hasOwnProperty(request.method)){

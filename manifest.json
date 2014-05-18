@@ -14,6 +14,11 @@
   "web_accessible_resources": [
     "so-last-year.css"
   ],
-  "permissions": [ "<all_urls>"]
-  // "permissions": ["http://*.stackoverflow.com/*"]
+  "permissions": [ 
+    "http://*.stackoverflow.com/*",
+    "contextMenus"
+  ],
+  "icons": {
+    "16": "icon-context.png"
+  }
 }
