@@ -1,20 +1,33 @@
 {
   "name": "That's SO Last Year",
   "description": "This extension will dim out Stack Overflow answers older than a year.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "manifest_version": 2,
+
   "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png",
     "default_title": "That's SO Last Year"
   },
-  "background": {
-    "scripts": [ "event.js"],
-    "persistent": false
-    },
+
+  // "background": {
+  //   "scripts": [ "popup.js"],
+  //   "persistent": false
+  // },
+
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "http://*/*",
+    "https://*/*"
+  ],
+
   "web_accessible_resources": [
     "so-last-year.css"
   ],
-  "permissions": [
-    "tabs",
-    "contextMenus"
-  ]
+
+  "content_scripts": [{
+    "js": [ "popup.js"],
+    "matches": [ "http://*/*", "http://*/*" ]
+    }]
 }
